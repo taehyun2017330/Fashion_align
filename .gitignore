@@ -1,0 +1,23 @@
+# Compiled python files
+*.pyc
+
+# Virtual environment
+venv/
+env/
+*.env
+
+# Node modules
+node_modules/
+
+# Compiled React files
+build/
+dist/
+
+# Dependency directories
+.packages/
+.idea/
+.vscode/
+
+# OS generated files
+.DS_Store
+Thumbs.db
