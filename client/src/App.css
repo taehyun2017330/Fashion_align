@@ -1,0 +1,302 @@
+.App {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  margin: 0;
+  padding: 30px;
+  gap: 15px;
+}
+
+[class$="-container"] {
+  border: 1px solid #E3E3E3;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.component-header {
+  color: black;
+  font-family: 'Mona Sans', serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.point-button {
+  background: none;
+  border: none;
+  color: #474646;
+  font-family: 'Mona Sans', serif;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: normal;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.point-button:hover {
+  background-color: #f0f0f0; /* Change background color on hover */
+}
+
+.point-button:active {
+  background-color: #cccccc; /* Change background color when clicked */
+}
+
+.map-container {
+  position: relative;
+  padding: 0;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  /*background-color: #F7F7F7;*/
+  flex: 1 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(45deg, #F7F7F7, #F7F7F7 2px, transparent 2px, transparent 4px);
+}
+
+.map-inner {
+  position: relative;
+  z-index: 1; /* Map view should be below other elements */
+  width: 100%;
+  height: 100%;
+}
+
+.minimap-container {
+  position: absolute;
+  z-index: 1000; /* Adjust the z-index as needed */
+  bottom: 10px;
+  right: 10px;
+  padding: 5px;
+}
+
+.chip-container {
+  display: inline-block;
+  padding: 5px 10px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  background: #FAFAFA;
+}
+
+.chip-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  color: #474646;
+  font-family: 'Mona Sans', serif;
+  font-style: normal;
+  font-size: 12px;
+  gap: 5px;
+}
+
+.chip-container:hover .point-button {
+  opacity: 1;
+}
+
+.label-button-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.summary-carousel {
+  display: flex;
+  overflow-x: hidden; /* Hide overflow for horizontal scrolling */
+  transition: transform 0.5s ease; /* Smooth transition for card movement */
+}
+
+.summary-card-container {
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.summary-card.active {
+  opacity: 1; /* Higher opacity for active card */
+}
+
+.summary-container {
+  display: flex;
+  flex-direction: column;
+  max-height: 50%;
+}
+
+.textarea-container {
+  font-family: 'Mona Sans', sans-serif;
+  padding: 5px;
+  box-shadow: none;
+  width: 97%;
+  overflow-y: hidden;
+  resize: none;
+  height: 12px;
+}
+
+.user-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.lasso-container {
+  position: absolute;
+  top: 10px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
+  z-index: 999; /* Adjust as needed to ensure it's on top */
+  background-color: rgba(255, 255, 255, 0.8); /* Adjust as needed */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+
+}
+
+.list-view-container {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.scrollable-container {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.sub-text {
+  font-size: 12px;
+  color: #474646;
+  font-family: 'Mona Sans', serif;
+  margin: 0;
+  padding: 0;
+}
+
+.user-input-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.double-slider {
+  position: relative;
+  height: 1px;
+  background-color: #E3E3E3; /* Background color of the slider track */
+  border-radius: 3px;
+  margin: 10px 0;
+}
+
+.slider-handle {
+  position: absolute;
+  width: 14px; /* Increased width for the slider handles */
+  height: 14px; /* Increased height for the slider handles */
+  background-color: white; /* White background color for the slider handles */
+  border: 2px solid #949494; /* Stroke border for the slider handles */
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.slider-handle:hover {
+  background-color: #949494; /* Color of the slider handles on hover */
+}
+
+.slider-handle:active {
+  background-color: #949494; /* Color of the slider handles when clicked */
+}
+
+.selected-range {
+  position: absolute;
+  background-color: #949494; /* Color of the selected range */
+  height: 4px; /* Adjust the height as needed */
+  border-radius: 2px; /* Match the border-radius of the slider track */
+}
+
+.areachart-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.canvas-container {
+  position: relative;
+  width: 100%;
+}
+
+.canvas-container canvas {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Update the styles for the table */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Update the styles for the table headers */
+th {
+  font-size: 12px;
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+/* Update the styles for the table cells */
+td {
+  font-size: 10px;
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+/* Update the styles for the images to fill the column space */
+.td-image img {
+  width: 60%;
+  height: auto;
+}
+
+.color-legend-container {
+    display: flex;
+    background-color: white;
+    position: absolute;
+    z-index: 1000; /* Adjust the z-index as needed */
+    top: 10px; /* Adjust as needed */
+    left: 10px; /* Adjust as needed */
+    gap: 5px;
+}
+
+.color-legend-item {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Align items vertically */
+  margin-right: 10px;
+}
+
+.color-legend-dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.color-legend-label {
+  font-size: 14px;
+}
+
+/* input view */
+.hover-container:hover .buttonContainer {
+  display: flex; 
+}
+
+.keyword-groups-outer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
