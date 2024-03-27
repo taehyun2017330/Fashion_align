@@ -1,6 +1,6 @@
 # FashionAlign
 
-![FashionAlign Interface](url_to_your_image_here)
+![FashionAlign Interface](https://github.com/gracekim027/infovis-shared/blob/main/overview.png?raw=true)
 
 FashionAlign bridges the gap between novice users' intentions and the capabilities of fashion item search engines. By using natural language processing and advanced visualization techniques, our system transforms abstract style descriptions into a visually curated display of fashion items. This approach significantly improves the search experience by aligning textual descriptions with visual features, making it easier for users to find what they're looking for without needing detailed domain knowledge.
 
